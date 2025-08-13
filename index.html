@@ -1,0 +1,236 @@
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background: #f9fbfc;
+  color: #222;
+  line-height: 1.5;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur global */
+.container {
+  width: min(90%, 1100px);
+  margin: 0 auto;
+}
+
+/* LIENS */
+a {
+  text-decoration: none;
+  color: #00509E;
+  transition: color 0.3s ease;
+}
+a:hover,
+a:focus {
+  color: #003d66;
+  outline: none;
+}
+
+/* HEADER */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo svg {
+  display: block;
+}
+nav a {
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+nav a:first-child {
+  margin-left: 0;
+}
+
+/* HERO */
+.hero {
+  padding: 3rem 0 5rem;
+  background: linear-gradient(135deg, #00509E 0%, #0077CC 100%);
+  color: white;
+}
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.hero-text {
+  flex: 1 1 320px;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 470px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgb(0 80 158 / 0.2);
+  border: none;
+}
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+}
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+  background-color: #1da851;
+  outline: none;
+}
+.btn-snap {
+  background-color: #fffc00;
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgb(255 252 0 / 0.4);
+}
+.btn-snap:hover,
+.btn-snap:focus {
+  background-color: #e6e600;
+  outline: none;
+}
+.hero-image {
+  flex: 1 1 320px;
+  max-width: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgb(0 80 158 / 0.25);
+  animation: fadeInRight 1s ease forwards;
+}
+.hero-image img {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* SECTIONS GENERIQUES */
+.section {
+  padding: 4rem 0;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.05);
+}
+.section h2 {
+  font-size: 2rem;
+  color: #00509E;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* STEPS */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 2rem;
+}
+.step {
+  background: #f1f6fc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgb(0 80 158 / 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+.step:hover {
+  box-shadow: 0 8px 20px rgb(0 80 158 / 0.2);
+}
+.step-number {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #0077CC;
+  display: block;
+}
+.step h3 {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #003d66;
+}
+.step p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* TARIFS TABLE */
+.section-tarifs table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 8px 16px rgb(0 80 158 / 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+.section-tarifs th,
+.section-tarifs td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e7f1;
+  font-weight: 500;
+  color: #333;
+}
+.section-tarifs th {
+  background-color: #00509E;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.section-tarifs tbody tr:hover {
+  background-color: #f1f6fc;
+}
+.payment-note {
+  margin-top: 1rem;
+  font-style: italic;
+  text-align: center;
+  color: #555;
+}
