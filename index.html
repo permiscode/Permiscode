@@ -1,236 +1,188 @@
-/* Reset basique */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  scroll-behavior: smooth;
-  background: #f9fbfc;
-  color: #222;
-  line-height: 1.5;
-}
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PermisCode5310 : Obtenez votre permis de conduire rapidement et légalement à Limoges avec un accompagnement complet pour le code, la conduite et les démarches administratives.">
+  <meta name="keywords" content="permis de conduire, code de la route, auto-école, Limoges, formation accélérée, accompagnement permis">
+  <meta name="author" content="PermisCode5310">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="PermisCode5310 - Accompagnement Permis de Conduire">
+  <meta property="og:description" content="Passez votre permis rapidement avec un accompagnement complet : code, conduite, démarches administratives. Contactez-nous via WhatsApp ou Snapchat !">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:url" content="https://permiscode5310.fr">
+  <meta property="og:type" content="website">
+  <title>PermisCode5310 - Accompagnement pour votre permis de conduire</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <!-- Header -->
+  <header role="banner">
+    <div class="container header-container">
+      <div class="logo">
+        <svg width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo PermisCode5310">
+          <rect x="4" y="10" width="56" height="44" rx="8" stroke="#00509E" stroke-width="4" fill="#FFFFFF"/>
+          <path d="M12 18H52V46H12V18Z" fill="#00509E"/>
+          <text x="32" y="37" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="700" font-size="18">PC</text>
+        </svg>
+      </div>
+      <nav role="navigation" aria-label="Menu principal">
+        <a href="#tarifs">Tarifs</a>
+        <a href="#comment-ca-marche">Comment ça marche ?</a>
+        <a href="#avantages">Avantages</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-/* Conteneur global */
-.container {
-  width: min(90%, 1100px);
-  margin: 0 auto;
-}
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <h1 id="hero-title">Passe ton permis plus vite avec un accompagnement complet 🚗</h1>
+          <p>Code, conduite, démarches administratives : on s’occupe de tout pour une réussite rapide et sans stress.</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/33780907315?text=Bonjour%20PermisCode5310,%20je%20souhaite%20réserver%20mon%20accompagnement" target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="Réserver via WhatsApp">💬 Réserver sur WhatsApp</a>
+            <a href="https://www.snapchat.com/add/permiscode5310" target="_blank" rel="noopener" class="btn btn-snap" aria-label="Contacter via Snapchat">👻 Contacter sur Snapchat</a>
+          </div>
+        </div>
+        <picture class="hero-image">
+          <source srcset="images/hero.webp" type="image/webp">
+          <img src="images/hero.jpg" alt="Jeune conducteur heureux avec son permis" loading="lazy">
+        </picture>
+      </div>
+    </section>
 
-/* LIENS */
-a {
-  text-decoration: none;
-  color: #00509E;
-  transition: color 0.3s ease;
-}
-a:hover,
-a:focus {
-  color: #003d66;
-  outline: none;
-}
+    <!-- Comment ça marche -->
+    <section id="comment-ca-marche" class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 id="steps-title">Simple, rapide, transparent</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number" aria-hidden="true">1️⃣</span>
+            <h3>Inscription rapide</h3>
+            <p>Envoi de tes informations et acompte sécurisé via paiement en ligne.</p>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">2️⃣</span>
+            <h3>Préparation au code</h3>
+            <p>Accès illimité à des tests en ligne et cours intensifs personnalisés.</p>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">3️⃣</span>
+            <h3>Formation à la conduite</h3>
+            <p>Moniteurs agréés, planning adapté à ton emploi du temps.</p>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">4️⃣</span>
+            <h3>Accompagnement administratif</h3>
+            <p>Création du dossier NEPH, réservation des examens, suivi complet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* HEADER */
-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
-}
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo svg {
-  display: block;
-}
-nav a {
-  margin-left: 2rem;
-  font-weight: 600;
-  font-size: 1rem;
-}
-nav a:first-child {
-  margin-left: 0;
-}
+    <!-- Tarifs -->
+    <section id="tarifs" class="section section-tarifs" aria-labelledby="tarifs-title">
+      <div class="container">
+        <h2 id="tarifs-title">Nos forfaits clairs et sans surprise</h2>
+        <table role="grid">
+          <thead>
+            <tr>
+              <th scope="col">Formation</th>
+              <th scope="col">Prix</th>
+              <th scope="col">Inclus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Code seul</strong></td>
+              <td><strong>450 €</strong></td>
+              <td>Accès illimité aux tests, supports de cours, suivi par un formateur</td>
+            </tr>
+            <tr>
+              <td><strong>Permis complet</strong></td>
+              <td><strong>1 000 €</strong></td>
+              <td>Code + 20h de conduite + réservation examen + dossier ANTS</td>
+            </tr>
+            <tr>
+              <td><strong>Forfait accéléré</strong></td>
+              <td><em>Sur devis</em></td>
+              <td>Programme intensif en moins de 30 jours</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="payment-note">*Acompte à l’inscription, solde à la fin de la formation.*</p>
+      </div>
+    </section>
 
-/* HERO */
-.hero {
-  padding: 3rem 0 5rem;
-  background: linear-gradient(135deg, #00509E 0%, #0077CC 100%);
-  color: white;
-}
-.hero-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-}
-.hero-text {
-  flex: 1 1 320px;
-}
-.hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.1;
-  text-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
-}
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 470px;
-}
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.btn {
-  display: inline-block;
-  padding: 0.85rem 1.8rem;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgb(0 80 158 / 0.2);
-  border: none;
-}
-.btn-whatsapp {
-  background-color: #25d366;
-  color: white;
-}
-.btn-whatsapp:hover,
-.btn-whatsapp:focus {
-  background-color: #1da851;
-  outline: none;
-}
-.btn-snap {
-  background-color: #fffc00;
-  color: #000;
-  font-weight: 700;
-  box-shadow: 0 4px 8px rgb(255 252 0 / 0.4);
-}
-.btn-snap:hover,
-.btn-snap:focus {
-  background-color: #e6e600;
-  outline: none;
-}
-.hero-image {
-  flex: 1 1 320px;
-  max-width: 480px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgb(0 80 158 / 0.25);
-  animation: fadeInRight 1s ease forwards;
-}
-.hero-image img {
-  width: 100%;
-  display: block;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-}
+    <!-- Avantages -->
+    <section id="avantages" class="section section-avantages" aria-labelledby="avantages-title">
+      <div class="container">
+        <h2 id="avantages-title">Pourquoi choisir PermisCode5310 ?</h2>
+        <ul class="advantages-list">
+          <li>📅 <strong>Gain de temps</strong> — Processus optimisé pour obtenir ton permis rapidement.</li>
+          <li>📝 <strong>Aide administrative</strong> — On gère toutes les démarches complexes.</li>
+          <li>📍 <strong>Flexibilité</strong> — Planning adapté à ton emploi du temps.</li>
+          <li>📱 <strong>Support direct</strong> — Disponible via WhatsApp ou Snapchat, 7j/7.</li>
+          <li>🥳 <strong>Fiabilité</strong> — Accompagnement légal et professionnel garanti.</li>
+        </ul>
+      </div>
+    </section>
 
-/* ANIMATIONS */
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+    <!-- FAQ -->
+    <section id="faq" class="section section-faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Questions fréquentes</h2>
+        <dl>
+          <dt>Dois-je passer l’examen officiel ?</dt>
+          <dd>Oui, nos formations préparent aux examens officiels conformément à la réglementation française.</dd>
+          <dt>Quel est le délai moyen pour obtenir le permis ?</dt>
+          <dd>Entre 1 et 3 mois, selon ta disponibilité et les dates d’examen dans ton centre.</dd>
+          <dt>Quels sont les moyens de paiement ?</dt>
+          <dd>Virement bancaire, carte bancaire ou mobile money. Acompte à l’inscription, solde avant la dernière séance.</dd>
+          <dt>Puis-je personnaliser mon forfait ?</dt>
+          <dd>Oui, contacte-nous pour un devis adapté à tes besoins spécifiques.</dd>
+        </dl>
+      </div>
+    </section>
 
-/* SECTIONS GENERIQUES */
-.section {
-  padding: 4rem 0;
-  background-color: white;
-  border-radius: 10px;
-  margin-bottom: 3rem;
-  box-shadow: 0 8px 16px rgb(0 0 0 / 0.05);
-}
-.section h2 {
-  font-size: 2rem;
-  color: #00509E;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+    <!-- Contact -->
+    <section id="contact" class="section section-contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Prêt à commencer ?</h2>
+        <div class="contact-buttons">
+          <a href="https://wa.me/33780907315?text=Bonjour%20PermisCode5310,%20je%20souhaite%20réserver%20mon%20accompagnement" target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="Réserver via WhatsApp">💬 Réserver sur WhatsApp</a>
+          <a href="https://www.snapchat.com/add/permiscode5310" target="_blank" rel="noopener" class="btn btn-snap" aria-label="Contacter via Snapchat">👻 Contacter sur Snapchat</a>
+        </div>
+        <p class="contact-note">Nous répondons 7j/7, en moins de 15 minutes en journée.</p>
+      </div>
+    </section>
+  </main>
 
-/* STEPS */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 2rem;
-}
-.step {
-  background: #f1f6fc;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgb(0 80 158 / 0.1);
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-}
-.step:hover {
-  box-shadow: 0 8px 20px rgb(0 80 158 / 0.2);
-}
-.step-number {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #0077CC;
-  display: block;
-}
-.step h3 {
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  color: #003d66;
-}
-.step p {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* TARIFS TABLE */
-.section-tarifs table {
-  width: 100%;
-  border-collapse: collapse;
-  box-shadow: 0 8px 16px rgb(0 80 158 / 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  background: white;
-}
-.section-tarifs th,
-.section-tarifs td {
-  padding: 1rem 1.5rem;
-  text-align: left;
-  border-bottom: 1px solid #e0e7f1;
-  font-weight: 500;
-  color: #333;
-}
-.section-tarifs th {
-  background-color: #00509E;
-  color: white;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-.section-tarifs tbody tr:hover {
-  background-color: #f1f6fc;
-}
-.payment-note {
-  margin-top: 1rem;
-  font-style: italic;
-  text-align: center;
-  color: #555;
-}
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container footer-container">
+      <nav aria-label="Menu du pied de page">
+        <a href="#tarifs">Tarifs</a>
+        <a href="#comment-ca-marche">Comment ça marche ?</a>
+        <a href="#avantages">Avantages</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://www.snapchat.com/add/permiscode5310" target="_blank" rel="noopener">Snapchat</a>
+      </nav>
+      <p>© 2025 PermisCode5310. Tous droits réservés.</p>
+      <p>
+        <a href="#" target="_blank" rel="noopener">Mentions légales</a> | 
+        <a href="#" target="_blank" rel="noopener">Conditions générales</a> | 
+        <a href="#" target="_blank" rel="noopener">Politique de confidentialité</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
