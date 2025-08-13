@@ -1,4 +1,4 @@
-/* Variables CSS pour cohérence et maintenance */
+/* Variables CSS */
 :root {
   --primary: #00509E;
   --secondary: #0077CC;
@@ -13,7 +13,7 @@
   --border: #E0E7F1;
 }
 
-/* Reset et base */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ body {
   flex-direction: column;
 }
 
-/* Conteneur global */
+/* Conteneur */
 .container {
   width: min(90%, 1200px);
   margin: 0 auto;
@@ -46,7 +46,7 @@ body {
 a {
   text-decoration: none;
   color: var(--primary);
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
 }
 
 a:hover,
@@ -60,7 +60,7 @@ a:focus {
 header {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -106,7 +106,7 @@ nav a:first-child {
 }
 
 .hero-text h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -127,9 +127,9 @@ nav a:first-child {
 
 .btn {
   display: inline-block;
-  padding: 0.9rem 2rem;
+  padding: 1rem 2.2rem;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   user-select: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -183,7 +183,7 @@ nav a:first-child {
   }
 }
 
-/* Sections génériques */
+/* Sections */
 .section {
   padding: 5rem 0;
   background: var(--white);
@@ -193,10 +193,42 @@ nav a:first-child {
 }
 
 .section h2 {
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   color: var(--primary);
   margin-bottom: 2.5rem;
   text-align: center;
+}
+
+/* Services */
+.services-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background: var(--background);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.service-item h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--hover);
 }
 
 /* Steps */
@@ -231,11 +263,6 @@ nav a:first-child {
   color: var(--hover);
 }
 
-.step p {
-  font-size: 1rem;
-  color: var(--text);
-}
-
 /* Tarifs */
 .section-tarifs table {
   width: 100%;
@@ -251,7 +278,6 @@ nav a:first-child {
   padding: 1.2rem 1.5rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
-  font-weight: 500;
 }
 
 .section-tarifs th {
@@ -269,20 +295,6 @@ nav a:first-child {
   font-style: italic;
   text-align: center;
   color: #555;
-}
-
-/* Avantages */
-.advantages-list {
-  list-style: none;
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.advantages-list li {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
 }
 
 /* FAQ */
@@ -347,7 +359,7 @@ footer {
   outline: 2px solid #80b3ff;
 }
 
-/* Mode sombre (optionnel) */
+/* Mode sombre */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1A252F;
@@ -369,6 +381,7 @@ footer {
   .hero-image {
     max-width: 100%;
   }
+  .services-list,
   .steps {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
@@ -405,6 +418,7 @@ footer {
   .section {
     padding: 3rem 0;
   }
+  .services-list,
   .steps {
     grid-template-columns: 1fr;
   }
