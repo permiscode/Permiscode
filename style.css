@@ -1,0 +1,94 @@
+/* AVANTAGES */
+.advantages-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.6;
+}
+.advantages-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* FAQ */
+.section-faq dl {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+}
+.section-faq dt {
+  font-weight: 700;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+}
+.section-faq dd {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* CONTACT */
+.section-contact {
+  text-align: center;
+}
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.contact-note {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  background-color: #003d66;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer-container nav {
+  margin-bottom: 0.6rem;
+}
+.footer-container nav a {
+  color: white;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+.footer-container nav a:hover,
+.footer-container nav a:focus {
+  color: #80b3ff;
+  outline: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .contact-buttons {
+    flex-direction: column;
+  }
+  .contact-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
