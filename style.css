@@ -1,13 +1,13 @@
 /* Variables CSS */
 :root {
-  --primary-text: #2C2C2C; /* Gris foncé pour texte principal */
-  --secondary-bg: #F5F5F5; /* Gris clair pour fonds secondaires */
-  --accent: #6B7280; /* Vert olive pour accents */
-  --link-hover: #4B5E6B; /* Vert foncé pour liens au survol */
+  --primary-violet: #6C63FF; /* Violet royal dominant */
+  --accent-red: #E63946; /* Rouge framboise pour CTA */
+  --white: #FFFFFF; /* Fond principal */
+  --secondary-bg: #F5F5F5; /* Gris perle pour fonds secondaires */
+  --text: #1E1E1E; /* Noir doux pour texte */
+  --border: #E5E7EB; /* Bordure légère */
   --whatsapp: #25D366; /* Vert WhatsApp */
   --snapchat: #FFFC00; /* Jaune Snapchat */
-  --white: #FFFFFF; /* Fond principal */
-  --border: #E5E7EB; /* Bordure légère */
   --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -23,7 +23,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   background: var(--white);
-  color: var(--primary-text);
+  color: var(--text);
   line-height: 1.6;
 }
 
@@ -43,14 +43,14 @@ body {
 /* Liens */
 a {
   text-decoration: none;
-  color: var(--accent);
+  color: var(--primary-violet);
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: var(--link-hover);
-  outline: 1px solid var(--accent);
+  color: darken(var(--primary-violet), 10%);
+  outline: 1px solid var(--primary-violet);
   outline-offset: 2px;
 }
 
@@ -79,13 +79,19 @@ header {
   font-weight: 600;
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
+  color: var(--text);
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: var(--primary-violet);
 }
 
 /* Hero */
 .hero {
   padding: 4rem 0 6rem;
-  background: var(--white);
-  color: var(--primary-text);
+  background: linear-gradient(135deg, var(--primary-violet), var(--accent-red));
+  color: var(--white);
 }
 
 .hero-container {
@@ -104,12 +110,13 @@ header {
   font-size: clamp(2.5rem, 5vw, 3.8rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--primary-text);
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: #666666;
+  color: var(--white);
   margin-bottom: 2.5rem;
   max-width: 700px;
   margin-left: auto;
@@ -133,8 +140,8 @@ header {
   border-radius: 8px;
   cursor: pointer;
   user-select: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border: 1px solid var(--border);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 1.1rem;
   height: 65px;
 }
@@ -144,16 +151,24 @@ header {
   transform: translateY(-2px);
 }
 
-.btn-whatsapp {
-  background: var(--whatsapp);
+.btn-primary {
+  background: var(--primary-violet);
   color: var(--white);
-  border: none;
 }
 
-.btn-snap {
-  background: var(--snapchat);
-  color: var(--primary-text);
-  border: none;
+.btn-primary:hover,
+.btn-primary:focus {
+  background: darken(var(--primary-violet), 10%);
+}
+
+.btn-secondary {
+  background: var(--accent-red);
+  color: var(--white);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: darken(var(--accent-red), 10%);
 }
 
 .hero-image {
@@ -161,6 +176,7 @@ header {
   max-width: 550px;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: var(--shadow-light);
 }
 
 .hero-image img {
@@ -180,7 +196,7 @@ header {
 
 .section h2 {
   font-size: clamp(2rem, 4vw, 2.6rem);
-  color: var(--accent);
+  color: var(--primary-violet);
   margin-bottom: 2rem;
   text-align: center;
   font-weight: 600;
@@ -206,12 +222,17 @@ header {
   border-radius: 8px;
   padding: 2.5rem;
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.service-item:hover {
+  background: lighten(var(--secondary-bg), 5%);
 }
 
 .service-item h3 {
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-text);
+  color: var(--text);
 }
 
 /* Steps */
@@ -226,11 +247,16 @@ header {
   border-radius: 8px;
   padding: 2.5rem;
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.step:hover {
+  background: lighten(var(--secondary-bg), 5%);
 }
 
 .step-number {
   font-size: 2.2rem;
-  color: var(--accent);
+  color: var(--primary-violet);
   margin-bottom: 1rem;
   display: block;
 }
@@ -238,7 +264,7 @@ header {
 .step h3 {
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-text);
+  color: var(--text);
 }
 
 /* Tarifs */
@@ -259,7 +285,7 @@ header {
 
 .section-tarifs th {
   background: var(--secondary-bg);
-  color: var(--primary-text);
+  color: var(--text);
   font-weight: 600;
 }
 
@@ -284,7 +310,7 @@ header {
   font-weight: 600;
   margin-top: 1.5rem;
   font-size: 1.3rem;
-  color: var(--accent);
+  color: var(--primary-violet);
 }
 
 .section-faq dd {
@@ -313,7 +339,7 @@ header {
 
 /* Footer */
 footer {
-  background: #2C2C2C;
+  background: var(--text);
   color: var(--white);
   padding: 2.5rem 0;
   text-align: center;
@@ -332,22 +358,29 @@ footer {
 
 .footer-container nav a:hover,
 .footer-container nav a:focus {
-  color: var(--accent);
-  outline: 1px solid var(--accent);
+  color: var(--primary-violet);
+  outline: 1px solid var(--primary-violet);
 }
 
 /* Mode sombre */
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-text: #E5E7EB;
-    --secondary-bg: #2C2C2C;
     --white: #1F2937;
+    --secondary-bg: #2C2C2C;
+    --text: #E5E7EB;
     --border: #4B5563;
+  }
+  .hero {
+    background: linear-gradient(135deg, #4B5E6B, #6B7280);
   }
   .section-tarifs th {
     background: #2C2C2C;
   }
   .section-tarifs tbody tr:hover {
+    background: #2C2C2C;
+  }
+  .service-item:hover,
+  .step:hover {
     background: #2C2C2C;
   }
 }
