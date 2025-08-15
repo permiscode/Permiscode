@@ -1,17 +1,19 @@
-/* Variables CSS */
+/* ============================= */
+/* Variables CSS - Palette Harmonisée */
+/* ============================= */
 :root {
-  --primary-violet: #6C63FF; /* Violet royal dominant */
-  --accent-red: #E63946; /* Rouge framboise pour CTA */
-  --white: #FFFFFF; /* Fond principal */
-  --secondary-bg: #F5F5F5; /* Gris perle pour fonds secondaires */
-  --text: #1E1E1E; /* Noir doux pour texte */
-  --border: #E5E7EB; /* Bordure légère */
-  --whatsapp: #25D366; /* Vert WhatsApp */
-  --snapchat: #FFFC00; /* Jaune Snapchat */
+  --primary-violet: #6C63FF; /* Violet royal */
+  --accent-red: #E63946; /* Rouge framboise */
+  --white: #FFFFFF; /* Blanc pur */
+  --secondary-bg: #F5F5F5; /* Gris perle */
+  --text: #1E1E1E; /* Noir doux */
+  --border: #E5E7EB; /* Gris clair bordure */
   --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Reset */
+/* ============================= */
+/* Reset + Base */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
@@ -33,61 +35,74 @@ body {
   flex-direction: column;
 }
 
-/* Conteneur */
+/* ============================= */
+/* Conteneur global */
+/* ============================= */
 .container {
   width: min(90%, 1200px);
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* ============================= */
 /* Liens */
+/* ============================= */
 a {
   text-decoration: none;
   color: var(--primary-violet);
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: darken(var(--primary-violet), 10%);
-  outline: 1px solid var(--primary-violet);
-  outline-offset: 2px;
+  color: var(--accent-red);
+  outline: none;
 }
 
-/* Header */
-header {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  padding: 1.5rem 0;
+/* ============================= */
+/* Header modernisé */
+/* ============================= */
+.main-header {
+  background: linear-gradient(135deg, var(--primary-violet), var(--accent-red));
+  padding: 1rem 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  box-shadow: var(--shadow-light);
 }
 
 .header-container {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
 }
 
 .nav-menu {
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  align-items: center;
+  gap: 2rem;
 }
 
 .nav-menu a {
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  color: var(--text);
+  font-weight: 500;
+  color: var(--white);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
 }
 
 .nav-menu a:hover,
 .nav-menu a:focus {
-  color: var(--primary-violet);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Hero */
+/* ============================= */
+/* Hero Section */
+/* ============================= */
 .hero {
   padding: 4rem 0 6rem;
   background: linear-gradient(135deg, var(--primary-violet), var(--accent-red));
@@ -110,13 +125,11 @@ header {
   font-size: clamp(2.5rem, 5vw, 3.8rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--white);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: var(--white);
   margin-bottom: 2.5rem;
   max-width: 700px;
   margin-left: auto;
@@ -141,7 +154,7 @@ header {
   cursor: pointer;
   user-select: none;
   transition: transform 0.2s ease, background-color 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
   font-size: 1.1rem;
   height: 65px;
 }
@@ -156,9 +169,8 @@ header {
   color: var(--white);
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background: darken(var(--primary-violet), 10%);
+.btn-primary:hover {
+  background: #574bd3;
 }
 
 .btn-secondary {
@@ -166,9 +178,8 @@ header {
   color: var(--white);
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background: darken(var(--accent-red), 10%);
+.btn-secondary:hover {
+  background: #c72f3b;
 }
 
 .hero-image {
@@ -186,11 +197,12 @@ header {
   border-radius: 12px;
 }
 
+/* ============================= */
 /* Sections */
+/* ============================= */
 .section {
   padding: 5rem 0;
   background: var(--white);
-  border-radius: 8px;
   margin-bottom: 3rem;
 }
 
@@ -202,13 +214,15 @@ header {
   font-weight: 600;
 }
 
+/* ============================= */
 /* Services */
+/* ============================= */
 .services-intro {
   max-width: 900px;
   margin: 0 auto 2.5rem;
   font-size: 1.1rem;
   text-align: center;
-  color: #666666;
+  color: #666;
 }
 
 .services-list {
@@ -226,16 +240,17 @@ header {
 }
 
 .service-item:hover {
-  background: lighten(var(--secondary-bg), 5%);
+  background: #eaeaea;
 }
 
 .service-item h3 {
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--text);
 }
 
+/* ============================= */
 /* Steps */
+/* ============================= */
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -247,33 +262,25 @@ header {
   border-radius: 8px;
   padding: 2.5rem;
   text-align: center;
-  transition: background-color 0.3s ease;
 }
 
 .step:hover {
-  background: lighten(var(--secondary-bg), 5%);
+  background: #eaeaea;
 }
 
 .step-number {
   font-size: 2.2rem;
   color: var(--primary-violet);
   margin-bottom: 1rem;
-  display: block;
 }
 
-.step h3 {
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--text);
-}
-
+/* ============================= */
 /* Tarifs */
+/* ============================= */
 .section-tarifs table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 8px;
   background: var(--white);
-  overflow: hidden;
 }
 
 .section-tarifs th,
@@ -285,8 +292,6 @@ header {
 
 .section-tarifs th {
   background: var(--secondary-bg);
-  color: var(--text);
-  font-weight: 600;
 }
 
 .section-tarifs tbody tr:hover {
@@ -297,10 +302,12 @@ header {
   margin-top: 1.5rem;
   font-style: italic;
   text-align: center;
-  color: #666666;
+  color: #666;
 }
 
+/* ============================= */
 /* FAQ */
+/* ============================= */
 .section-faq dl {
   max-width: 900px;
   margin: 0 auto;
@@ -316,28 +323,24 @@ header {
 .section-faq dd {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #666666;
+  color: #666;
 }
 
+/* ============================= */
 /* Contact */
+/* ============================= */
 .section-contact {
   text-align: center;
 }
 
-.contact-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-
 .contact-note {
   font-size: 1rem;
-  color: #666666;
+  color: #666;
 }
 
+/* ============================= */
 /* Footer */
+/* ============================= */
 footer {
   background: var(--text);
   color: var(--white);
@@ -356,89 +359,23 @@ footer {
   font-weight: 600;
 }
 
-.footer-container nav a:hover,
-.footer-container nav a:focus {
+.footer-container nav a:hover {
   color: var(--primary-violet);
-  outline: 1px solid var(--primary-violet);
 }
 
-/* Mode sombre */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --white: #1F2937;
-    --secondary-bg: #2C2C2C;
-    --text: #E5E7EB;
-    --border: #4B5563;
-  }
-  .hero {
-    background: linear-gradient(135deg, #4B5E6B, #6B7280);
-  }
-  .section-tarifs th {
-    background: #2C2C2C;
-  }
-  .section-tarifs tbody tr:hover {
-    background: #2C2C2C;
-  }
-  .service-item:hover,
-  .step:hover {
-    background: #2C2C2C;
-  }
-}
-
-/* Responsive Design */
+/* ============================= */
+/* Responsive */
+/* ============================= */
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
   }
-  .hero-text {
-    flex: 1 1 100%;
-  }
-  .hero-image {
-    max-width: 100%;
-  }
-  .cta-buttons,
-  .contact-buttons {
+  .cta-buttons {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
   .nav-menu {
     flex-direction: column;
-    gap: 1.5rem;
-  }
-  .hero-text h1 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-  }
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-  .container {
-    padding: 0 0.5rem;
-  }
-  .section {
-    padding: 3rem 0;
-  }
-  .services-list,
-  .steps {
-    grid-template-columns: 1fr;
-  }
-  .section-tarifs th,
-  .section-tarifs td {
-    padding: 0.9rem;
-    font-size: 0.95rem;
-  }
-}
-
-@media (min-width: 769px) {
-  .hero-container {
-    align-items: flex-start;
-  }
-  .cta-buttons,
-  .contact-buttons {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .nav-menu {
-    flex-direction: row;
-    justify-content: center;
+    gap: 1rem;
   }
 }
